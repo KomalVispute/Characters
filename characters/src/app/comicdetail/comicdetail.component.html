@@ -1,0 +1,66 @@
+<div class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2>Users Data</h2>
+        <div class="d-flex" style="margin-left: 1000px;">
+            <a routerLink="/comiclist" class="btn btn-success" >Comic List</a> &nbsp;
+            <a routerLink="/signup" class="btn btn-success" >Add User</a> &nbsp;
+            <a  routerLink="/login" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+  <div class="row">
+    <div class="com-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Details</h1>
+        </div>
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <th scope="row">Id :</th>
+              <td>{{ myData.id }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Image</th>
+              <td> <img [src]="myData.image"  style="width: 100px ; height: 100px;" alt=""> </td>
+            </tr>
+            <tr>
+              <th scope="row">Name :</th>
+              <td colspan="2">{{ myData.name }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Gender :
+                    </th>
+                <td colspan="2">
+                    {{
+                      myData.gender
+                    }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Birth :</th>
+                <td colspan="2">{{ myData.birth }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Origin :</th>
+                <td colspan="2">{{ myData.origin }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Power :</th>
+                <td colspan="2">{{ myData.powers}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Friend :</th>
+                <td colspan="2">{{ myData.friends }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Enemies :</th>
+                <td colspan="2">{{ myData.enemies }}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

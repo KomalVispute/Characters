@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CrudService } from '../crud.service';
 import { Router } from '@angular/router';
 
@@ -12,15 +12,16 @@ export class SignupComponent implements OnInit {
   signup!:FormGroup;
   data:any;
   editid:any;
+  submitted:boolean=false;
   constructor(private formBuilder:FormBuilder, private crud :CrudService , private router:Router){
 
   }
  ngOnInit(): void {
    this.signup=this.formBuilder.group({
-    fullname:[''],
-    mob:[''],
-    email:[''],
-    password:[''],
+    fullname:['',Validators.required],
+    mob:['',Validators.required],
+    email:['',Validators.required],
+    password:['',Validators.required],
    })
    this.editid=localStorage.getItem("edit");
    if(this.editid!=null){
@@ -37,7 +38,16 @@ export class SignupComponent implements OnInit {
     })
    }
  }
+
+ get m() {
+  return this.signup.controls;
+}
+
  onSubmit(){
+  this.submitted=true;
+  if(this.signup.invalid)
+  { return
+   }
   if(this.editid!=null){
   this.crud.update(this.signup.value).subscribe(res=>{
     alert("Update succcessful");
@@ -52,4 +62,5 @@ export class SignupComponent implements OnInit {
   })
  }
 }
+
 }

@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ComiclistComponent implements OnInit {
   searchText:any;
   Data: any;
+  order: any;
   constructor(private crud:CrudService , private router :Router){}
   ngOnInit(): void {
     this.crud.comiclist().subscribe((res)=>{
@@ -36,4 +37,22 @@ export class ComiclistComponent implements OnInit {
   }
 
 
+  sort(){
+    if(this.order){
+      let newArr=this.Data.sort((a:any,b:any)=>a.id-b.id)
+      this.Data=newArr
+    }
+    else{
+      let newArr=this.Data.sort((a:any,b:any)=>b.id-a.id)
+      this.Data=newArr
+      
+    }
+    this.order=!this.order
+  }
+
+  shift(data:any){
+      console.warn("shift data",data);
+      localStorage.setItem("comicdetail",JSON.stringify(data))
+      this.router.navigate(['comicdetail'])
+  }
 }

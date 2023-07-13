@@ -1,14 +1,7 @@
 {
   "posts": [
     {
-      "fullname": "Komal",
-      "mob": "1234567890",
-      "email": "Komal@gmail.com",
-      "password": "123456",
-      "id": 2
-    },
-    {
-      "fullname": "qqqq",
+      "fullname": "rrrrrrrrrrr",
       "mob": "sfsdf1111",
       "email": "eeee@gmail.com",
       "password": "123456",
@@ -24,25 +17,25 @@
   ],
   "comments": [
     {
-      "image":"Image",
+      "image": "https://picsum.photos/200/300",
       "name": "Komal",
-      "gender": "1234567890",
-      "birth": "Komal@gmail.com",
-      "origin": "123456",
-      "powers":"fsdfsd",
-      "friends":"Mine",
-      "enemies":"dfgdg",
+      "gender": "Female",
+      "birth": "15/06/2013",
+      "origin": "India",
+      "powers": "Main",
+      "friends": "Sneha",
+      "enemies": "Peter",
       "id": 2
     },
     {
-      "image":"dfsfsf",
-      "name": "Poo",
-      "gender": "54353",
-      "birth": "gmail@gmail.com",
-      "origin": "4534535",
-      "powers":"aaaaaa",
-      "friends":"ddd",
-      "enemies":"dfgdg",
+      "image": "https://picsum.photos/id/237/200/300",
+      "name": "Hrishi",
+      "gender": "Mail",
+      "birth": "hrishi@gmail.com",
+      "origin": "Germany",
+      "powers": "Primary",
+      "friends": "Rahul",
+      "enemies": "Vishakha",
       "id": 3
     }
   ],

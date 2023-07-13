@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { SearchPipe } from './search.pipe';
+import { ComicdetailComponent } from './comicdetail/comicdetail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchPipe } from './search.pipe';
     SignupComponent,
     DashboardComponent,
     ComiclistComponent,
-    SearchPipe
+    SearchPipe,
+    ComicdetailComponent
   ],
   imports: [
     BrowserModule,

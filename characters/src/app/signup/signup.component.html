@@ -18,10 +18,16 @@
                             <label for="exampleInputEmail1" class="form-label">FullName</label>
                             <input type="text" class="form-control" formControlName="fullname">
                             
+                            <div *ngIf="m['fullname'].errors && submitted" style="color: red;">
+                              Fullname Required
+                            </div>
                           </div>
                           <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Mobile No</label>
                             <input type="text" class="form-control" formControlName="mob">
+                            <div *ngIf="m['mob'].errors && submitted" style="color: red;">
+                              Mobile Required
+                            </div>
                           
                           </div>
 
@@ -29,12 +35,17 @@
                           <label for="exampleInputEmail1" class="form-label">Email address</label>
                           <input type="email" class="form-control" 
                           formControlName="email">
-                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                          <div *ngIf="m['email'].errors && submitted" style="color: red;">
+                            Email Required
+                          </div>
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputPassword1" class="form-label">Password</label>
                           <input type="password" class="form-control" 
                           formControlName="password">
+                          <div *ngIf="m['password'].errors && submitted" style="color: red;">
+                            Password Required
+                          </div>
                         </div>
                         
                         <button type="submit" class="btn btn-primary">   {{editid ? 'Update' : 'SignUp'}}</button>

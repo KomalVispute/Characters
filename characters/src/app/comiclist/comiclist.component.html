@@ -11,7 +11,8 @@
 
 <div class="card">
     <div class="serach-hero">
-        <input type="text" name="search" [(ngModel)]="searchText" placeholder="Serch Here"/>
+        <input type="text" name="search" [(ngModel)]="searchText" placeholder="Serch Here"/> &nbsp;
+        <button (click)="sort()"  class="btn btn-info">Sort</button>
    
     </div>
     <table class="table">
@@ -28,9 +29,9 @@
         <th>Enemies</th>
        
     </tr>
-    <tr *ngFor="let data of Data | search :searchText">
+    <tr *ngFor="let data of Data | search :searchText" (click)="shift(data)">
         <td>{{data.id}}</td>
-        <td>{{data.image}}</td>
+        <td> <img [src]="data.image"  style="width: 100px ; height: 100px;" alt=""> </td>
         <td>{{data.name}}</td>
         <td>{{data.gender}}</td>
         <td>{{data.birth}}</td>
@@ -39,8 +40,8 @@
         <td>{{data.friends}}</td>
         <td>{{data.enemies}}</td>
 
-        <td > <button class="btn btn-success" (click)="Edit(data)"> Edit </button></td>
-        <td > <button class="btn btn-danger" (click)="Delete(data.id)"> Delete </button></td>
+        <!-- <td > <button class="btn btn-success" (click)="Edit(data)"> Edit </button></td>
+        <td > <button class="btn btn-danger" (click)="Delete(data.id)"> Delete </button></td> -->
     </tr>
 </table>
 </div>
