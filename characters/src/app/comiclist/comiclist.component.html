@@ -1,0 +1,46 @@
+<div class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2>Users Data</h2>
+        <div class="d-flex" style="margin-left: 1000px;">
+            <a routerLink="/signup" class="btn btn-success" >Add User</a> &nbsp;
+            <a  routerLink="/login" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="serach-hero">
+        <input type="text" name="search" [(ngModel)]="searchText" placeholder="Serch Here"/>
+   
+    </div>
+    <table class="table">
+
+    <tr>
+        <th>Id</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Birth</th>
+        <th>Origin</th>
+        <th>Powers</th>
+        <th>Friends</th>
+        <th>Enemies</th>
+       
+    </tr>
+    <tr *ngFor="let data of Data | search :searchText">
+        <td>{{data.id}}</td>
+        <td>{{data.image}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.gender}}</td>
+        <td>{{data.birth}}</td>
+        <td>{{data.origin}}</td>
+        <td>{{data.powers}}</td>
+        <td>{{data.friends}}</td>
+        <td>{{data.enemies}}</td>
+
+        <td > <button class="btn btn-success" (click)="Edit(data)"> Edit </button></td>
+        <td > <button class="btn btn-danger" (click)="Delete(data.id)"> Delete </button></td>
+    </tr>
+</table>
+</div>

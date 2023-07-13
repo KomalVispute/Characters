@@ -1,0 +1,32 @@
+<div class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2>Users Data</h2>
+        <div class="d-flex" style="margin-left: 1000px;">
+            <a routerLink="/comiclist" class="btn btn-success" >Comic List</a> &nbsp;
+            <a routerLink="/signup" class="btn btn-success" >Add User</a> &nbsp;
+            <a  routerLink="/login" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="card"><table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Mobile No</th>
+        <th>Email</th>
+        <th>Password</th>
+       
+    </tr>
+    <tr *ngFor="let data of Data">
+        <td>{{data.id}}</td>
+        <td>{{data.fullname}}</td>
+        <td>{{data.mob}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.password}}</td>
+        <td > <button class="btn btn-success" (click)="Edit(data)"> Edit </button></td>
+        <td > <button class="btn btn-danger" (click)="Delete(data.id)"> Delete </button></td>
+    </tr>
+</table>
+</div>
