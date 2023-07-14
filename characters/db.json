@@ -1,18 +1,18 @@
 {
   "posts": [
     {
-      "fullname": "rrrrrrrrrrr",
-      "mob": "sfsdf1111",
-      "email": "eeee@gmail.com",
-      "password": "123456",
-      "id": 3
-    },
-    {
       "fullname": "harsha",
       "mob": "7777777777",
       "email": "harsha.chandarana@eluminoustechnologies.com",
-      "password": "Password@123",
+      "password": "123456",
       "id": 4
+    },
+    {
+      "fullname": "Komal",
+      "mob": "9874563214",
+      "email": "komalsonar@gmail.com",
+      "password": "1234567",
+      "id": 5
     }
   ],
   "comments": [
@@ -25,18 +25,51 @@
       "powers": "Main",
       "friends": "Sneha",
       "enemies": "Peter",
-      "id": 2
+      "id": 1
     },
     {
-      "image": "https://picsum.photos/id/237/200/300",
+      "image": "https://loremflickr.com/320/240?random=1",
       "name": "Hrishi",
-      "gender": "Mail",
-      "birth": "hrishi@gmail.com",
+      "gender": "Male",
+      "birth": "20/05/1936",
       "origin": "Germany",
       "powers": "Primary",
       "friends": "Rahul",
       "enemies": "Vishakha",
+      "id": 2
+    },
+    {
+      "image": "https://loremflickr.com/320/240/paris,girl/all",
+      "name": "Swaroop",
+      "gender": "Male",
+      "birth": "14/03/1985",
+      "origin": "USA",
+      "powers": "Secondary",
+      "friends": "John",
+      "enemies": "Som",
       "id": 3
+    },
+    {
+      "image": "https://loremflickr.com/320/240/brazil,rio",
+      "name": "Pooja",
+      "gender": "Female",
+      "birth": "23/06/1999",
+      "origin": "Canada",
+      "powers": "Primary",
+      "friends": "Rahul",
+      "enemies": "Swapnil",
+      "id": 4
+    },
+    {
+      "image": "https://loremflickr.com/g/320/240/paris",
+      "name": "Sarang",
+      "gender": "Male",
+      "birth": "19/08/2023",
+      "origin": "India",
+      "powers": "Third",
+      "friends": "Sneha",
+      "enemies": "Rudra",
+      "id": 5
     }
   ],
   "profile": {

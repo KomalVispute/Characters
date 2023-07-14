@@ -13,6 +13,7 @@ export class SignupComponent implements OnInit {
   data:any;
   editid:any;
   submitted:boolean=false;
+  emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$';
   constructor(private formBuilder:FormBuilder, private crud :CrudService , private router:Router){
 
   }

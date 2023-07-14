@@ -24,19 +24,26 @@
                           </div>
                           <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Mobile No</label>
-                            <input type="text" class="form-control" formControlName="mob">
-                            <div *ngIf="m['mob'].errors && submitted" style="color: red;">
+                            <input type="text" class="form-control"   pattern="^(?!0+$)\d{10,}$" 
+                            maxlength="10"
+                            formControlName="mob">
+                            <div *ngIf="m['mob'].errors?.['required'] && submitted" style="color: red;">
                               Mobile Required
                             </div>
-                          
+                            <div *ngIf="m['mob'].errors?.['pattern']" style="color: red;">
+                              Mobile Invalid
+                            </div>
                           </div>
 
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Email address</label>
                           <input type="email" class="form-control" 
-                          formControlName="email">
+                          formControlName="email" [pattern]="emailPattern">
                           <div *ngIf="m['email'].errors && submitted" style="color: red;">
                             Email Required
+                          </div>
+                          <div *ngIf="m['email'].errors?.['pattern']">
+                           Email Invalid
                           </div>
                         </div>
                         <div class="mb-3">
